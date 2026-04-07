@@ -1,4 +1,4 @@
-# Interactive Wall Calendar Component
+# Interactive Wall Calendar 
 
 A polished, responsive wall-calendar style planner built with **React**, **TypeScript**, **Vite**, **Tailwind CSS**, **Framer Motion**, and **date-fns**.
 

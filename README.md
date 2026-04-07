@@ -57,5 +57,4 @@ The component was built to feel like a modern digital version of a physical wall
 ### Persistence
 All important UI state is saved using **localStorage**, keeping the experience fully frontend-only as required.
 
-## Folder Structure
 

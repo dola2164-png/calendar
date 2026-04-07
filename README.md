@@ -59,14 +59,3 @@ All important UI state is saved using **localStorage**, keeping the experience f
 
 ## Folder Structure
 
-```text
-src/
-  components/
-    CalendarGrid.tsx
-    CalendarHeader.tsx
-    DayCell.tsx
-    HeroPanel.tsx
-    NotesPanel.tsx
-    PresetActions.tsx
-  App.tsx
-  index.css

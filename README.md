@@ -1,4 +1,6 @@
 # Interactive Wall Calendar 
+## 🌐 Live Demo
+[View Project](https://calendarbysayani.vercel.app/)
 
 A polished, responsive wall-calendar style planner built with **React**, **TypeScript**, **Vite**, **Tailwind CSS**, **Framer Motion**, and **date-fns**.
 

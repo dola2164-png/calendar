@@ -1,73 +1,72 @@
-# React + TypeScript + Vite
+# Interactive Wall Calendar Component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A polished, responsive wall-calendar style planner built with **React**, **TypeScript**, **Vite**, **Tailwind CSS**, **Framer Motion**, and **date-fns**.
 
-Currently, two official plugins are available:
+This project was designed as a frontend engineering challenge focused on translating a static visual inspiration into an interactive, user-friendly calendar experience with strong UI polish, responsive layout handling, and thoughtful product details.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Live Features
 
-## React Compiler
+- Wall-calendar inspired layout with a **hero image panel**
+- **Month navigation** with animated transitions
+- **Date range selection** with clear visual states
+- Single **notes panel** with 3 note modes:
+  - Today
+  - Monthly
+  - Range
+- **localStorage persistence** for:
+  - selected dates
+  - notes
+  - theme
+- **Responsive design** for desktop and mobile
+- **Dark / Light mode**
+- Visual markers for:
+  - today
+  - weekends
+  - holidays
+- Enhanced interactions and motion using **Framer Motion**
+- Premium UI styling with rounded cards, subtle borders, warm spacing, and animated elements
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Framer Motion
+- date-fns
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Design Choices
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+The component was built to feel like a modern digital version of a physical wall calendar.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Layout
+- A **hero image panel** acts as the visual anchor of the component.
+- Desktop uses a **segmented two-column layout** for stronger visual hierarchy.
+- Mobile collapses naturally into a **stacked layout** to keep date selection and notes touch-friendly.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Interaction Design
+- Users can select a **start date** and **end date** across the month grid.
+- The selected range uses distinct visual treatment for:
+  - selected cells
+  - cells in between
+  - today
+  - weekend
+  - holiday
+- A single note section was used instead of multiple text areas to improve clarity and reduce clutter.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Persistence
+All important UI state is saved using **localStorage**, keeping the experience fully frontend-only as required.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Folder Structure
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+```text
+src/
+  components/
+    CalendarGrid.tsx
+    CalendarHeader.tsx
+    DayCell.tsx
+    HeroPanel.tsx
+    NotesPanel.tsx
+    PresetActions.tsx
+  App.tsx
+  index.css
